@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+    <div>
+        <div class="logo">Справочник Стран</div>
+        <div class="subtitle">Поиск стран с информацией</div>
+    </div>
+
+    <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+</nav>
+
+<div class="container">
+
+<input id="country"
+       placeholder="Поиск..."
+       oninput="showList(); filterGrid();"
+       onkeydown="handleKey(event)"
+       autocomplete="off">
+
+<div id="dropdown"></div>
+
+<div id="result"></div>
+
+<div id="grid"></div>
+
+</div>
+
+<script src="countries.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
